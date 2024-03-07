@@ -221,7 +221,8 @@
   }
   
   .headerImageContainer{
-    height:50vh;
+    height:80vh;
+    width:90vw;
   }
   .headerButtonLink{
     font-size:1px;
@@ -230,7 +231,7 @@
 }
 @media screen and (max-width: 950px){
   .headerImageContainer{
-    height:40vh;
+    height:60vh;
     width:90vw;
   }
   .headerButtonLink{
