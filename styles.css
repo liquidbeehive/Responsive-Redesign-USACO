@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope-Bold';
+    src: url('Manrope/static/Manrope-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Manrope-Medium';
+    src: url('Manrope/static/Manrope-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  
+  h1{
+    font-family:"JetBrains Mono", sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+  }
+  h2{
+    font-family:"Manrope-Bold", sans-serif;
+    font-size: x-large;
+    color: rgb(0, 0, 0);
+  }
+  h3{
+    font-family:"Manrope-Medium", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: medium;
+  }
+  body {
+    display: flex;
+    margin: 0;
+  }
+  /* everything for the top header bar (what I call the "logo bar" */
+  #logoBar{
+    /* position: absolute; */
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    background-color: rgb(8, 87, 167,1);
+    justify-content: space-between;
+  }
+  .logo{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1em;
+  }
+  .logo img{
+    float: left;
+    max-width: 3em;
+    max-height:3em;
+    object-fit: contain;
+  }
+  .logoText{
+    margin:2%;
+    min-width: 3em;
+    font-size: 3em;
+  }
+  .signIn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 2%;
+  }
+  .signInText {
+    font-family:"Manrope-Medium", sans-serif;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    min-width: 8em;
+    justify-content: flex-end;
+  }
+  .signIn img{
+    float: right;
+    max-width: 3em;
+    max-height:3em;
+    object-fit: contain;
+    margin: 2%;
+  }
+
+  /* everything for the navigation button/bars */
+  #buttonBar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+  }
+  .headerButtonLink{
+    font-family:"Manrope-Medium", sans-serif;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+    min-width: 8em;
+    margin: 1em;
+    display: flex;
+    align-self: flex-end;
+  }
+  .headerButton{
+    width: 16.5%;
+    height: 4em;
+    background-color: rgb(100, 178, 170,1);
+    float: left;
+  }
+
+  /* everything for the header card */
+  #headerCard{
+    display: flex;
+    flex: auto;
+    max-width: 100vw;
+    /* height:fit-content; */
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  .headerImageContainer{
+    width: 90vw;
+    /* height: 20em; */
+    height:20em;
+    display: flex;
+    /* max-width: fit-content; */
+    flex: auto;
+    object-fit: cover;
+    overflow: hidden;
+    align-self: center;
+    justify-content: center;
+  }
+  .headerImage{
+    object-fit:none;
+    width: 100%;
+    /* height: 100%; */
+    
+    overflow: hidden;
+  }
+  .imageHeaderText{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */
+    align-items: center;
+    justify-content: center;
+  }
+  .USACOname{
+    display: flex;
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 1%;
+  }
+  .contestButton{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 30px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+  .contestText{
+    display: flex;
+    font-family:"Manrope-Medium", sans-serif;
+    font-size: large;
+    color: rgb(85, 85, 85);
+    min-width: 15em;
+    max-width: 70vw;
+    margin: 1em;
+    justify-content: center;
+  }
+  .nameAndButton{
+    position: absolute;
+    display: flex;
+    flex: auto;
+    max-width: 100vw;
+    height:fit-content;
+    margin: 5%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+/* everything for the body/main text */
+  #textBoxes{
+    padding-left: 1em;
+    padding-right: 5%;
+    max-width: 80vw;
+  }
+  #calendar{
+    padding: 5%;
+    max-width: 30vw;
+    border-left: solid;
+    border-color: rgb(0, 0, 0);
+  }
+  #bodyText{
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+  }
+  .scheduleHeader{
+    margin: 0%;
+  }
+
+/* repsonsive redesign */
+@media screen and (max-width: 700px){
+  #bodyText{
+    flex-direction: column-reverse;
+  }
+  #calendar{
+    padding: 5%;
+    max-width: 80vw;
+    border-bottom: solid;
+    border-left: 0;
+  }
+  
+  .headerImageContainer{
+    height:50vh;
+  }
+  .headerButtonLink{
+    font-size:1px;
+  }
+
+}
+@media screen and (max-width: 950px){
+  .headerImageContainer{
+    height:40vh;
+    width:90vw;
+  }
+  .headerButtonLink{
+ 
+    font-size: large;
+  }
+}
+@media screen and (max-width: 770px){
+  .headerButtonLink{
+    font-size:medium;
+  }
+}
+
